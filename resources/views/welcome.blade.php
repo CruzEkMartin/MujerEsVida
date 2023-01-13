@@ -174,9 +174,7 @@
                         <a href="{{ url('/home') }}">Inicio</a>
                     @else
                         <a href="{{ route('login') }}">Administración</a>
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+                       
                 @endif
             </div>
             @endif
@@ -194,16 +192,16 @@
                 <div class="carousel-item active w-100">
                     <img class="d-block w-100" src="{{ asset('img/c22.jpg') }}" alt="First slide" />
                     <div class="carousel-caption ">
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h5>¿A QUIÉN VA DIRIGIDO?</h5>
+                        <p>A las personas que tengan carencia en el acceso a la alimentación y a grupos sociales vulnerables; que radiquen en los municipios, localidades y/o colonias que se establezcan en las convocatorias que emita la SEDESO y soliciten su ingreso al programa.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
 
                     <img class="d-block w-100" src="{{ asset('img/c33.jpg') }}" alt="Second slide" />
                     <div class="carousel-caption">
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h5>BENEFICIOS</h5>
+                        <p>Recibir apoyo alimentario de manera bimestral para lograr la seguridad alimentaria y nutrimental.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -223,6 +221,24 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-3 text-center">
+                <a href="{{ route('register') }}" target="_self"><img class="imagen" src="{{asset('img/verifica2022.png')}}"/></a>                    
+            </div> 
+
+             <div class="col-sm-12 col-md-3 text-center">
+                    <a href="https://qroo.gob.mx/sedeso/wp-content/sedeso/uploads/2022/12/COLONIAS-PARTICIPANTES-14.jpg" target="_blank"><img class="imagen" src="{{asset('img/colonias2022.png')}}"/></a>                    
+                </div> 
+            
+                <div class="col-sm-12 col-md-3 text-center">
+                    <a href="https://qroo.gob.mx/sedeso/ubica-tu-centro-entrega/" target="_blank"><img class="imagen" src="{{asset('img/ubica2022.png')}}"/></a>                    
+                </div> 
+
+                <div class="col-sm-12 col-md-3 text-center">
+                    <a href="https://qroo.gob.mx/sedeso/como-vamos/" target="_blank"><img class="imagen" src="{{asset('img/como2022.png')}}"/></a>                    
+                </div>
+            </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
