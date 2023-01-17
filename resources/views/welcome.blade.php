@@ -37,6 +37,7 @@
             color: ;
         }
 
+
         .carousel {
             position: relative;
             margin-bottom: 0px;
@@ -153,17 +154,37 @@
         .carousel-caption p {
             margin-bottom: 0;
         }
+
+        @media (max-width: 767px) {
+            .carousel-caption {
+            position: relative;
+            height: 150px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 15px;
+            background: #ab0a3d;
+            
+        }
+
+}
+
     </style>
 
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="row justify-content-between">
-            <img src="img/logo_qroo.png" alt="">
-            <img src="img/logo_unidos.png" alt="">
-            <img src="img/logo_hambrecero.png" alt="">
-            <img src="img/logo_sedeso.png" alt="">
+        <div class="row justify-content-between align-items-center">
+           
+                <img class="img-fluid" style="width: 3%" src="img/logo_qroo.png" alt="">
+           
+                <img class="img-fluid " style="width: 12%" src="img/logo_unidos.png" alt="">
+           
+                <img class="img-fluid " style="width: 17%" src="img/logo_hambrecero.png" alt="">
+           
+                <img class="img-fluid" style="width: 10%" src="img/logo_sedeso.png" alt="">
+           
         </div>
 
         <div class="row justify-content-end primario text-white ">
@@ -188,7 +209,7 @@
                 <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active w-100">
+                <div class="carousel-item active ">
                     <img class="d-block w-100" src="{{ asset('img/c22.jpg') }}" alt="First slide" />
                     <div class="carousel-caption ">
                         <h5>¿A QUIÉN VA DIRIGIDO?</h5>
@@ -224,27 +245,32 @@
             </a>
         </div>
 
-        <div class="row justify-content-center secundario">
-            <div class="col-md-3 text-white">
-                <a href="{{ route('register') }}" data-toggle="tooltip"
-                    title="Registrate"> <i class="fas fa-eye fa-lg"></i></a>
+        <div class="row align-items-center secundario">
+            <div class="col-6 col-md-3 text-center">
+                <a href="{{ route('register') }}" data-toggle="tooltip" title="Regístrate o inicia sesión"> <img
+                        class="img-fluid" src="{{ asset('img/verifica2023.png') }}"></img></a>
             </div>
 
-            <div class="col-md-3">
-
+            <div class="col-6 col-md-3 text-center">
+                <a href="https://qroo.gob.mx/sedeso/wp-content/sedeso/uploads/2022/12/COLONIAS-PARTICIPANTES-14.jpg"
+                    data-toggle="tooltip" title="Colonias o localidades participantes"> <img class="img-fluid" 
+                        src="{{ asset('img/colonias2023.png') }}"></img></a>
             </div>
 
-            <div class="col-md-3">
-
+            <div class="col-6 col-md-3 text-center">
+                <a href="https://qroo.gob.mx/sedeso/ubica-tu-centro-entrega/" data-toggle="tooltip"
+                    title="Ubica tu Centro de Entrega más cercano"> <img class="img-fluid" 
+                        src="{{ asset('img/ubica2023.png') }}"></img></a>
             </div>
 
-            <div class="col-md-3">
-
+            <div class="col-6 col-md-3 text-center">
+                <a href="https://qroo.gob.mx/sedeso/como-vamos/" data-toggle="tooltip" title="¿Cómo vamos?"> <img
+                        class="img-fluid"  src="{{ asset('img/como2023.png') }}"></img></a>
             </div>
 
         </div>
 
-        <div class="row justify-content-center">
+        {{-- <div class="row justify-content-center">
             <div class="col-sm-12 col-md-3 text-center">
                 <a href="{{ route('register') }}" target="_self"><img class="imagen"
                         src="{{ asset('img/verifica2022.png') }}" /></a>
@@ -264,7 +290,7 @@
                 <a href="https://qroo.gob.mx/sedeso/como-vamos/" target="_blank"><img class="imagen"
                         src="{{ asset('img/como2022.png') }}" /></a>
             </div>
-        </div>
+        </div> --}}
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
