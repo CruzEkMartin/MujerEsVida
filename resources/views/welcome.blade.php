@@ -151,14 +151,14 @@
             margin: 0 0 5px;
         }
 
-        .carousel-caption p {
+        .carousel-caption h5 {
             margin-bottom: 0;
         }
 
         @media (max-width: 767px) {
             .carousel-caption {
             position: relative;
-            height: 150px;
+            height: 110px;
             right: 0;
             bottom: 0;
             left: 0;
@@ -207,31 +207,38 @@
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active ">
-                    <img class="d-block w-100" src="{{ asset('img/c22.jpg') }}" alt="First slide" />
+                    <img class="d-block w-100" src="{{ asset('img/c22.jpg') }}" alt="¿A quién va dirigido?" />
                     <div class="carousel-caption ">
-                        <h5>¿A QUIÉN VA DIRIGIDO?</h5>
+                        <h4>¿A QUIÉN VA DIRIGIDO?</h4>
                         <p>A las personas que tengan carencia en el acceso a la alimentación y a grupos sociales
-                            vulnerables; que radiquen en los municipios, localidades y/o colonias que se establezcan en las
-                            convocatorias que emita la SEDESO y soliciten su ingreso al programa.</p>
+                            vulnerables.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
 
-                    <img class="d-block w-100" src="{{ asset('img/c33.jpg') }}" alt="Second slide" />
+                    <img class="d-block w-100" src="{{ asset('img/c33.jpg') }}" alt="Beneficios" />
                     <div class="carousel-caption">
-                        <h5>BENEFICIOS</h5>
+                        <h4>BENEFICIOS</h4>
                         <p>Recibir apoyo alimentario de manera bimestral para lograr la seguridad alimentaria y nutrimental.
                         </p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{{ asset('img/c44.jpg') }}" alt="Third slide" />
+                    <img class="d-block w-100" src="{{ asset('img/c44.jpg') }}" alt="¿En qué consiste?"/>
                     <div class="carousel-caption">
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h4>¿EN QUÉ CONSISTE?</h4>
+                        <p>En la entrega de un paquete alimentario por hogar, que contendrá productos de la canasta básica.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ asset('img/c55.jpg') }}" alt="Requisitos" />
+                    <div class="carousel-caption">
+                        <h4>REQUISITOS</h4>
+                        <p>Radicar en los municipios, localidades y/o colonias que se establezcan en las convocatorias que emita la SEDESO y soliciten su ingreso al programa.</p>
                     </div>
                 </div>
             </div>
@@ -247,24 +254,24 @@
 
         <div class="row align-items-center secundario">
             <div class="col-6 col-md-3 text-center">
-                <a href="{{ route('register') }}" data-toggle="tooltip" title="Regístrate o inicia sesión"> <img
+                <a href="{{ route('register') }}"  data-toggle="tooltip" title="Regístrate o inicia sesión"> <img
                         class="img-fluid" src="{{ asset('img/verifica2023.png') }}"></img></a>
             </div>
 
             <div class="col-6 col-md-3 text-center">
                 <a href="https://qroo.gob.mx/sedeso/wp-content/sedeso/uploads/2022/12/COLONIAS-PARTICIPANTES-14.jpg"
-                    data-toggle="tooltip" title="Colonias o localidades participantes"> <img class="img-fluid" 
+                target="_blank" data-toggle="tooltip" title="Colonias o localidades participantes"> <img class="img-fluid" 
                         src="{{ asset('img/colonias2023.png') }}"></img></a>
             </div>
 
             <div class="col-6 col-md-3 text-center">
-                <a href="https://qroo.gob.mx/sedeso/ubica-tu-centro-entrega/" data-toggle="tooltip"
+                <a href="https://qroo.gob.mx/sedeso/ubica-tu-centro-entrega/" target="_blank" data-toggle="tooltip"
                     title="Ubica tu Centro de Entrega más cercano"> <img class="img-fluid" 
                         src="{{ asset('img/ubica2023.png') }}"></img></a>
             </div>
 
             <div class="col-6 col-md-3 text-center">
-                <a href="https://qroo.gob.mx/sedeso/como-vamos/" data-toggle="tooltip" title="¿Cómo vamos?"> <img
+                <a href="https://qroo.gob.mx/sedeso/como-vamos/" target="_blank" data-toggle="tooltip" title="¿Cómo vamos?"> <img
                         class="img-fluid"  src="{{ asset('img/como2023.png') }}"></img></a>
             </div>
 
