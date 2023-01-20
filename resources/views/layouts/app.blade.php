@@ -1,18 +1,15 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <link rel="shortcut icon" href= "img/icono.ico"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'MujerEsVida') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+   
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,7 +17,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
     <div id="app">
@@ -60,6 +58,8 @@
                                     {{ Auth::user()->name }}
                                 </a>
 
+                                	
+
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -82,5 +82,27 @@
             @yield('content')
         </main>
     </div>
+
+    {{-- sweetalert --}}
+   <script src="{{ asset('js/app.js') }}"></script> 
+
+    <script>        
+        function mayusculas(e) {
+            e.value = e.value.toUpperCase();
+        }
+        
+        if ( $(".HideAlert").length > 0 ){
+			setTimeout(function() {
+				$(".HideAlert").remove();
+			}, 5000);
+		}
+        
+    </script>
+
+
+    @yield('js')
+
+    @yield('script')
+
 </body>
 </html>

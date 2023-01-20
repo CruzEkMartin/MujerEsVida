@@ -1,3 +1,3 @@
 require('./bootstrap');
 
-Window.Swal = require('sweetalert2')
+Window.Swal = require('sweetalert2');
