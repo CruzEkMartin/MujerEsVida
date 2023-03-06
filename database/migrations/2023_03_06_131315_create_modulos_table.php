@@ -13,19 +13,19 @@ class CreateModulosTable extends Migration
      */
     public function up()
     {
-        Schema::create('modulos', function (Blueprint $table) {
+        Schema::create('c_modulos', function (Blueprint $table) {
             $table->id();
-            $table->integer('idMunicipio');
-            $table->string('municipio');
-            $table->string('nombre');
-            $table->string('domicilio');
-            $table->string('telefono_publico');
-            $table->string('geolocalizacion');
-            $table->string('responsable');
-            $table->string('telefono_responsable');
-            $table->string('longitud');
-            $table->string('latitud');
-            $table->boolean('status');
+            $table->integer('idMunicipio')->nullable();
+            $table->string('municipio')->nullable();
+            $table->string('nombre')->nullable();
+            $table->string('domicilio')->nullable();
+            $table->string('telefono_publico')->nullable();
+            $table->string('geolocalizacion')->nullable();
+            $table->string('responsable')->nullable();
+            $table->string('telefono_responsable')->nullable();
+            $table->string('longitud')->nullable();
+            $table->string('latitud')->nullable();
+            $table->boolean('status')->nullable();
             $table->timestamps();
         });
     }
@@ -37,6 +37,6 @@ class CreateModulosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('modulos');
+        Schema::dropIfExists('c_modulos');
     }
 }

@@ -184,7 +184,7 @@
 
             <img class="img-fluid " style="width: 12%" src="img/logo_unidos.png" alt="">
 
-            <img class="img-fluid " style="width: 10%" src="img/logo_mujer_es_vida2.png" alt="">
+            {{-- <img class="img-fluid " style="width: 10%" src="img/logo_mujer_es_vida2.png" alt=""> --}}
 
             <img class="img-fluid" style="width: 10%" src="img/logo_sedeso.png" alt="">
 
