@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Modulo;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,7 +29,10 @@ class HomeController extends Controller
 
     public function modulos()
     {
-        return view('mapa_modulos');
+        //llamamos a todos los puntos para mapearlos
+        $modulos = Modulo::where('status', "1")->get();
+        //dd($modulos);
+        return view('mapa_modulos', compact('modulos'));
     }
 
 }

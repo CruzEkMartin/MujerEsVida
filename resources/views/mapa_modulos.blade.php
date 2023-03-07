@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    
 
     <style>
         #map {
@@ -21,8 +23,8 @@
             filter: hue-rotate(120deg);
         }
 
-        /* 
-        * Optional: Makes the sample page fill the window. 
+        /*
+        * Optional: Makes the sample page fill the window.
         */
         html,
         body {
@@ -58,7 +60,7 @@
 
 <body>
 
-    <div class="container-fluid" style="background-image: url('/img/back.png'); width: 100%;" >
+    <div class="container-fluid" style="background-image: url('/img/back.png'); width: 100%;">
         <div class="row justify-content-between align-items-center">
 
             <img class="img-fluid" style="width: 3%" src="img/logo_qroo.png" alt="">
@@ -79,7 +81,8 @@
             <div class="modal-content">
                 <div class="modal-header Encabezado-Modal">
                     <h5 class="modal-title" id="titulo"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span
+                            aria-hidden="true">&times;</span></button>
 
                 </div>
                 <div class="modal-body" id="info"></div>
@@ -91,9 +94,15 @@
     </div><!-- /.modal -->
 </body>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
 
 
 
@@ -102,7 +111,41 @@
     var latitud = 0;
     var longitud = 0;
 
-    
+    <?php
+
+    $municipio = '';
+    $nombre = '';
+    $domicilio = '';
+    $telefono_publico = '';
+    $longitud = '';
+    $latitud = '';
+
+    if ($modulos) {
+        foreach ($modulos as $modulo) {
+            $municipio = $modulo->municipio;
+            $nombre = $modulo->nombre;
+            $domicilio = $modulo->domicilio;
+            $telefono_publico = $modulo->telefono_publico;
+            $longitud = $modulo->longitud;
+            $latitud = $modulo->latitud;
+
+    ?>
+
+
+    latitud = parseFloat(<?php echo $modulo->longitud; ?>);
+    longitud = parseFloat(<?php echo $modulo->latitud; ?>);
+
+    var marker = L.marker([latitud, longitud]).addTo(map);
+
+    //se cambia el color de los markers
+    marker._icon.classList.add("huechange");
+   
+    <?php
+        } //cierre foreach
+    } //cierre  if ($modulos) 
+
+    ?>
+
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
