@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Secretaría de Desarrollo Social - Portal HambreCero</title>
+    <title>Secretaría de Desarrollo Social</title>
 
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
@@ -230,7 +230,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{{ asset('img/c221.jpg') }}" alt="¿A quién va dirigido?" />
+                    <img class="d-block w-100" src="{{ asset('img/c22.jpg') }}" alt="¿A quién va dirigido?" />
                     <div class="carousel-caption ">
                         <h4>¿A QUIÉN VA DIRIGIDO?</h4>
                         <p>A las personas que tengan carencia en el acceso a la alimentación y a grupos sociales
@@ -238,7 +238,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{{ asset('img/c331.jpg') }}" alt="Beneficios" />
+                    <img class="d-block w-100" src="{{ asset('img/c33.jpg') }}" alt="Beneficios" />
                     <div class="carousel-caption">
                         <h4>BENEFICIOS</h4>
                         <p>Recibir apoyo alimentario de manera bimestral para lograr la seguridad alimentaria y nutrimental.
@@ -246,7 +246,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{{ asset('img/c441.jpg') }}" alt="¿En qué consiste?" />
+                    <img class="d-block w-100" src="{{ asset('img/c44.jpg') }}" alt="¿En qué consiste?" />
                     <div class="carousel-caption">
                         <h4>¿EN QUÉ CONSISTE?</h4>
                         <p>En la entrega de un paquete alimentario por hogar, que contendrá productos de la canasta básica.
@@ -254,7 +254,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{{ asset('img/c551.jpg') }}" alt="Requisitos" />
+                    <img class="d-block w-100" src="{{ asset('img/c55.jpg') }}" alt="Requisitos" />
                     <div class="carousel-caption">
                         <h4>REQUISITOS</h4>
                         <p>Radicar en los municipios, localidades y/o colonias que se establezcan en las convocatorias que
@@ -281,6 +281,11 @@
             <div class="col-6 col-md-3 text-center">
                 <a href="{{ route('modulos') }}" target="_blank"" data-toggle="tooltip" title="Localiza tu módulo para registro presencial"> <img class="img-fluid"
                         src="{{ asset('img/modulos2023.png') }}"></img></a>
+            </div>
+
+            <div class="col-sm-12 col-md-3 text-center">
+                <a href="https://qroo.gob.mx/sedeso/wp-content/sedeso/uploads/2023/03/CONVOCATORIA-MUJER-ES-VIDA-VF.pdf"
+                    target="_blank"><img class="imagen" src="{{ asset('img/consulta_convocatoria.png') }}" /></a>
             </div>
 
             <div class="col-sm-12 col-md-3 text-center" title="Ubica tu Centro de Entrega">
@@ -315,7 +320,7 @@
        
         <div id="modalLanding" class="modal">
             <div class="modal-dialog modal-lg modal-dialog-centered justify-content-center" role="document">
-                <img class="modal-content" id="img01" src="{{ asset('img/REGISTRO.jpg') }}">
+                <img class="modal-content" id="img01" src="{{ asset('img/CONVOCATORIA-MUJER-ES-VIDA-VF.jpg') }}">
             </div>
         </div>
 

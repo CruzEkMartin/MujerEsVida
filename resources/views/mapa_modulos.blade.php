@@ -73,6 +73,10 @@
 
         </div>
     </div>
+<br>
+    <div class="row justify-content-center">
+        <h4>MÓDULOS DE REGISTRO PRESENCIAL</h4>
+    </div>
 
     <div id="map"></div>
 
@@ -106,6 +110,7 @@
 
 
 
+
 <script>
     var map = L.map('map').setView([19.758289, -88.704269], 8);
     var latitud = 0;
@@ -136,9 +141,19 @@
     longitud = parseFloat(<?php echo $modulo->latitud; ?>);
 
     var marker = L.marker([latitud, longitud]).addTo(map);
+    //.bindPopup(
+    //    "<table class='table table-striped table-bordered table-condensed'><tr><th>Municipio</th><td><?php echo $modulo->municipio ?></td></tr><tr><th>Ubicación</th><td><?php echo $modulo->nombre ?></td></tr><tr><th>Domicilio</th><td><?php echo $modulo->domicilio ?></td></tr><tr><th>Teléfono de Atención</th><td><?php echo $modulo->telefono_publico ?></td></tr></table>"
+    //);
 
     //se cambia el color de los markers
     marker._icon.classList.add("huechange");
+
+    marker.on('click', function(e) {
+        $("#titulo").html("Módulo: {{ $modulo->nombre }}" );
+        $("#info").html("<table class='table table-striped table-bordered table-condensed'><tr><th>Municipio</th><td><?php echo $modulo->municipio ?></td></tr><tr><th>Ubicación</th><td><?php echo $modulo->nombre ?></td></tr><tr><th>Domicilio</th><td><?php echo $modulo->domicilio ?></td></tr><tr><th>Teléfono de Atención</th><td><?php echo $modulo->telefono_publico ?></td></tr></table>");
+        $('#mymodal').modal('show');
+    });
+
    
     <?php
         } //cierre foreach
