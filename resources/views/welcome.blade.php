@@ -274,12 +274,12 @@
 
         <div class="row justify-content-around secundario">
             <div class="col-6 col-md-3 text-center">
-                <a href="#" data-toggle="modal" data-target="#modalRegistro" data-toggle="tooltip" title="Regístrate en línea o inicia sesión"> <img class="img-fluid"
+                <a href="https://mujeresvida.bienestarqroo.com" target="_blank" data-toggle="tooltip" title="Regístrate en línea o inicia sesión"> <img class="img-fluid"
                         src="{{ asset('img/registro2023.png') }}"></img></a>
             </div>
 
             <div class="col-6 col-md-3 text-center">
-                <a href="{{ route('modulos') }}" target="_blank"" data-toggle="tooltip" title="Localiza tu módulo para registro presencial"> <img class="img-fluid"
+                <a href="{{ route('modulos') }}" target="_blank" data-toggle="tooltip" title="Localiza tu módulo para registro presencial"> <img class="img-fluid"
                         src="{{ asset('img/modulos2023.png') }}"></img></a>
             </div>
 
